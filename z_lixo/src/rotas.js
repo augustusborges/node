@@ -4,6 +4,7 @@ const rotas = express.Router();
 const ProdutoController = require("./controllers/ProdutoController");
 
 rotas.get("/produtos", ProdutoController.index);
+rotas.get("/produtos/:id", ProdutoController.buscar);
 rotas.post("/produtos", ProdutoController.criar);
 
 rotas.get("/", (req, res) => {

@@ -12,8 +12,13 @@ module.exports = {
 
     async criar(req, res) {
         logger.info("Criar :: " + req.body);
-
         const produto = await Produto.create(req.body);
+        return res.json(produto);
+    },
+
+    async buscar(req, res) {
+        logger.info("Editar :: " + req.params.id);
+        const produto = await Produto.findById(req.params.id);
         return res.json(produto);
     }
 };
