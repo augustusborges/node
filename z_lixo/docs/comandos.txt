@@ -1,0 +1,6 @@
+
+//Limpar cache do git
+git rm -r --cached .
+git add .
+git commit -m ".gitignore funcionando ;)"
+
