@@ -19,6 +19,11 @@ export default class Main extends Component {
                         <a href="">Acessar</a>
                     </article>
                 ))}
+
+                <div className="acoes">
+                    <button>Anterior</button>
+                    <button>Próxima</button>
+                </div>
             </div>
         );
     }
