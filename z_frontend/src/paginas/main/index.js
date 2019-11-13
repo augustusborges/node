@@ -10,6 +10,7 @@ export default class Main extends Component {
   }
 
   render() {
+    const { produtos, pagina, produtoInfo } = this.state;
     return (
       <div className="produto-lista">
         {this.state.produtos.map(produto => (
@@ -21,8 +22,15 @@ export default class Main extends Component {
         ))}
 
         <div className="acoes">
-          <button onClick={this.prevPage}>Anterior</button>
-          <button onClick={this.nextPage}>Próxima</button>
+          <button disabled={pagina === 1} onClick={this.prevPage}>
+            Anterior
+          </button>
+          <button
+            disabled={pagina === produtoInfo.pages}
+            onClick={this.nextPage}
+          >
+            Próxima
+          </button>
         </div>
       </div>
     );

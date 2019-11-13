@@ -55,6 +55,15 @@
   cursor: pointer;
 }
 
+.produto-lista .acoes button[disabled] {
+  opacity: 0.5;
+  cursor: default;
+}
+
 .produto-lista .acoes button:hover {
   opacity: 0.7;
+}
+
+.produto-lista .acoes button[disabled]:hover {
+  opacity: 0.5;
 }
